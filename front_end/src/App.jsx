@@ -6,21 +6,14 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <div
-          style={{
-            margin: "0",
-            display: "flex",
-            justifyContent: "space-between",
-            width: "100%",
-            alignItems: "center",
-            backgroundColor: "red",
-          }}
-        >
+        <header>
+          {/* replace p with logo */}
           <p>Shopping Center</p>
           <div className="sections">
+            {/* place everything else in header into here */}
             <Link to="/SignIn">Sign In</Link>
           </div>
-        </div>
+        </header>
         <Routes>
           <Route exact path="/SignIn" element={<SignIn />}></Route>
         </Routes>
