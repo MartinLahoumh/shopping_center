@@ -1,0 +1,13 @@
+.display-section-wrapper {
+  margin: 20px;
+  border: 1px solid #ccc; /* Add a border for visualization */
+  overflow-x: auto; /* Enable horizontal scrolling if content overflows */
+  white-space: nowrap; /* Prevent content from wrapping to the next line */
+}
+
+.art-container {
+  display: inline-flex;
+  gap: 10px; /* Adjust the gap between items as needed */
+  padding: 10px;
+  overflow: hidden;
+}
