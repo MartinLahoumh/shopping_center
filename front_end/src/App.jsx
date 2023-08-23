@@ -5,6 +5,7 @@ import SignIn from "./Routes/SignIn";
 import Home from "./Routes/Home";
 import ErrorPage from "./Routes/ErrorPage";
 import ArtPage from "./Routes/ArtPage";
+import CheckoutPage from "./Routes/CheckOutPage";
 
 function App() {
   return (
@@ -16,12 +17,15 @@ function App() {
           <div className="sections">
             {/* place everything else in header into here */}
             <Link to="/SignIn">Sign In</Link>
+            <Link to="/test1">ArtPage</Link>
+            <Link to="/test2">CheckOut</Link>
           </div>
         </header>
         <Routes>
           <Route exact path="/SignIn" element={<SignIn />}></Route>
           <Route path="/" element={<Home />}></Route>
-          <Route path="/test" element={<ArtPage/>}></Route>
+          <Route path="/test1" element={<ArtPage />}></Route>
+          <Route path="/test2" element={<CheckoutPage />}></Route>
           <Route path="*" element={<ErrorPage />}></Route>
         </Routes>
       </div>
