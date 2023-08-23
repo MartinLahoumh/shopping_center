@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { BrowserRouter as Link } from 'react-router-dom';
 import Redirect from 'react-router-dom';
 
-function SignIn() {
+function SignUp() {
     const [authForm, setAuthForm] = useState({
         username: "",
         password: "",
@@ -18,16 +18,9 @@ function SignIn() {
     const handleSubmit = async(event)=>{
         event.preventDefault();
         try {
-            const response = await axios.post(`http://localhost:5000/SignIn/${authForm.username}`,config)
-            if(response.data["msg"] == 1){
-                alert("Username not found");
-            } 
-            else if(response.data["msg"] == 2){
-                alert("Incorrect password");
-            }
-            else{
-                return(<Redirect to={"/"+response.access_token} />)
-            }
+            const response = await axios.post(`http://localhost:5000/SignUp/${authForm.username}`,config)
+            alert(response.data["msg"])
+            return(<Redirect to={"/SignIn"} />);
         } catch (error) {
             console.log(error)
         }
@@ -43,12 +36,12 @@ function SignIn() {
           <label>Password</label>
           <input type="text" name="password" id="password"></input>
           <br />
-          <button type="submit">Sign In</button>
-          <p>Dont have an account?</p><Link to="/SignUp">Sign Up!</Link>
+          <button type="submit">Create Account</button>
+          <p>Already have an account?</p><Link to="/SignIn">Sign In!</Link>
         </form>
       </div>
     </>
   );
 }
 
-export default SignIn;
+export default SignUp;

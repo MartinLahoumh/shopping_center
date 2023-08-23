@@ -30,9 +30,27 @@ db.create_all()
 def sign_in(username):
     formUsername = request.json.get('username')
     formPassword = request.json.get('password')
-    storedUsername = Users.query.get(username)
-    if storedUsername != formUsername:
+    User = Users.query.get(username)
+    if User["username"] != formUsername:
         return jsonify({"msg": 1}) #"User name does not exist"
+    elif User["password"] != formPassword:
+        return jsonify({"msg":2})
+    else:
+        access_token = create_access_token(identity=formUsername)
+        return jsonify({"access_token": access_token})
+
+@app.route('/SignUp/', methods=['POST'])
+def sign_up():
+    formUsername = request.json.get('username')
+    formPassword = request.json.get('password')
+    new_user = Users(
+        username=formUsername,
+        password=formPassword,
+    )
+    db.session.add(new_user)
+    db.session.commit()
+    return jsonify({"msg": "Account Successfully Created!"})
+
     
 
 if __name__ == '__main__':
