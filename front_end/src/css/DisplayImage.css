@@ -1,7 +1,13 @@
 .display-image-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   position: relative;
   text-align: center;
-  margin: 20px;
+
+  width: 300px;
+  height: 400px;
 }
 
 .image-container {
@@ -41,4 +47,8 @@
 
 .image-container:hover .description {
   opacity: 1;
+}
+
+.img-info {
+  margin: 0;
 }
