@@ -3,14 +3,15 @@ import "../css/DisplayImage.css";
 
 function DisplayImage({ imgURL, name, price, description, url }) {
   return (
-    <div
-      className="display-image-wrapper"
-      onClick={() => {
-        window.location.replace({ url });
-      }}
-    >
+    <div className="display-image-wrapper">
       <div className="image-container">
-        <img src={imgURL} alt={name} />
+        <img
+          src={imgURL}
+          alt={name}
+          onClick={() => {
+            window.location = `${window.location.href}${url}`;
+          }}
+        />
         <div className="description">{description}</div>
       </div>
       <p className="img-info">
