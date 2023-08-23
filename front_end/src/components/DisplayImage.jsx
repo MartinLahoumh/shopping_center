@@ -5,14 +5,15 @@ function DisplayImage({ imgURL, name, price, description, url }) {
   return (
     <div className="display-image-wrapper">
       <div className="image-container">
-        <img
-          src={imgURL}
-          alt={name}
+        <img src={imgURL} alt={name} />
+        <div
+          className="description"
           onClick={() => {
             window.location = `${window.location.href}${url}`;
           }}
-        />
-        <div className="description">{description}</div>
+        >
+          {description}
+        </div>
       </div>
       <p className="img-info">
         {name} <br /> ${price}
