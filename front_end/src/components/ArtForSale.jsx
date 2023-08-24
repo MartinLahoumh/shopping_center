@@ -1,4 +1,4 @@
-import QuantityButton from "../components/QuantityButton";
+import QuantityButton from './QuantityButton';
 import {useNavigate} from 'react-router-dom';
 
 function ArtForSale(){
@@ -14,7 +14,7 @@ function ArtForSale(){
         <>
             <div className="artWrapper">
                 <div className="art">
-                    <img src="#" alt="#" />
+                    <img src="https://ids.si.edu/ids/deliveryService?id=NPG-86T0028A_2&max=500" alt="#" />
                 </div>
 
                 <div className="descriptionOfArt">
