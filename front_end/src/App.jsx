@@ -17,7 +17,6 @@ function App() {
           <div className="sections">
             {/* place everything else in header into here */}
             <Link to="/SignIn">Sign In</Link>
-            <Link to="/ArtPage">ArtPage</Link>
             <Link to="/test2">CheckOut</Link>
           </div>
         </header>
