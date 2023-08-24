@@ -39,10 +39,6 @@ export default function ArtPage() {
   return (
     <>
       <div className="artWrapper">
-        <div className="art pop-out">
-          <img src={info.imgURL} alt={info.description} />
-        </div>
-
         <MagnifyingGlass imageUrl={info.imgURL} />
 
         <div>
