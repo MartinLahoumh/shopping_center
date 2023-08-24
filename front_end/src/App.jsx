@@ -13,7 +13,9 @@ function App() {
       <div className="App">
         <header>
           {/* replace p with logo */}
-          <p>Shopping Center</p>
+          <Link to="/">
+            <p>Shopping Center</p>
+          </Link>
           <div className="sections">
             {/* place everything else in header into here */}
             <Link to="/SignIn">Sign In</Link>
