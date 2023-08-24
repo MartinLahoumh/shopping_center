@@ -1,27 +1,27 @@
 .magnifying-glass-container {
-  position: relative;
-  display: inline-block;
+  display: flex;
+  flex-direction: row-reverse;
   cursor: crosshair;
-}
-
-.original-image {
-  display: block;
-  max-width: 100%;
+  overflow: scroll;
 }
 
 .magnifying-glass {
-  position: absolute;
-  width: 30vh;
-  height: 30vh;
+  width: 50vh;
+  height: 50vh;
   border: 2px solid #333;
-  /* border-radius: 50%; */
   background-repeat: no-repeat;
   background-size: 300% 300%;
-  transform: translate(-50%, -50%);
   pointer-events: none;
   display: none;
 }
 
 .magnifying-glass.magnified {
   display: block;
+}
+
+@media (max-width: 850px) {
+  .magnifying-glass,
+  .magnifying-glass.magnified {
+    display: none;
+  }
 }
