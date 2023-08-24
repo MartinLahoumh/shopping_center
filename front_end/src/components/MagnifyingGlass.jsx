@@ -23,17 +23,11 @@ function MagnifyingGlass({ imageUrl }) {
     const rect = e.target.getBoundingClientRect();
     const x = (e.clientX - rect.left) / rect.width;
     const y = (e.clientY - rect.top) / rect.height;
-
     setPosition({ x, y });
   };
 
   return (
-    <div
-      className="magnifying-glass-container"
-      onMouseEnter={handleMouseEnter}
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
-    >
+    <div className="magnifying-glass-container">
       <div
         className={`magnifying-glass ${magnified ? "magnified" : ""}`}
         style={{
@@ -41,7 +35,14 @@ function MagnifyingGlass({ imageUrl }) {
           backgroundPosition: `${position.x * 100}% ${position.y * 100}%`,
         }}
       ></div>
-      <img src={imageUrl} alt="Original" className="original-image" />
+      <img
+        src={imageUrl}
+        alt="Original"
+        className="original-image"
+        onMouseEnter={handleMouseEnter}
+        onMouseMove={handleMouseMove}
+        onMouseLeave={handleMouseLeave}
+      />
     </div>
   );
 }
