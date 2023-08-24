@@ -1,28 +1,34 @@
-import "../css/ArtForSale.css";
-import { useState } from "react";
+import PropTypes from "prop-types";
 
-function QuantityButton(){
-    const [quantity, setQuantity] = useState(0);
+function QuantityButton({ quantity, setQuantity }) {
+  const qtyIncrement = () => {
+    setQuantity(prevQuantity => ++prevQuantity);
+  };
 
-    const qtyIncrement = () => {
-        setQuantity(prevQuantity => ++prevQuantity);
-    };
+  const qtyDecrement = () => {
+    if (quantity > 0) {
+      setQuantity(prevQuantity => --prevQuantity);
+    }
+  };
 
-    const qtyDecrement = () => {
-        if (quantity > 0) {
-        setQuantity(prevQuantity => --prevQuantity);
-        }
-    };
-
-    return(
-        <>
-            <div className="quantity">
-                <button className="minus" onClick={qtyDecrement}>-</button>
-                <input className="qty" type="text" value={quantity} readOnly />
-                <button className="plus" onClick={qtyIncrement}>+</button>
-            </div>
-        </>
-    );
+  return (
+    <>
+      <div className="quantity">
+        <button className="minus" onClick={qtyDecrement}>
+          -
+        </button>
+        <input className="qty" type="text" value={quantity} readOnly />
+        <button className="plus" onClick={qtyIncrement}>
+          +
+        </button>
+      </div>
+    </>
+  );
 }
+
+QuantityButton.propTypes = {
+  quantity: PropTypes.number.isRequired,
+  setQuantity: PropTypes.func.isRequired,
+};
 
 export default QuantityButton;

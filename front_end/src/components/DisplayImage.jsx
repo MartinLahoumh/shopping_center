@@ -1,7 +1,9 @@
 import PropTypes from "prop-types";
 import "../css/DisplayImage.css";
+import { useNavigate } from "react-router-dom";
 
 function DisplayImage({ imgURL, name, price, description, url }) {
+  const navigate = useNavigate();
   return (
     <div className="display-image-wrapper">
       <div className="image-container">
@@ -9,7 +11,7 @@ function DisplayImage({ imgURL, name, price, description, url }) {
         <div
           className="description"
           onClick={() => {
-            window.location = `${window.location.href}${url}`;
+            navigate(`/ArtPage?id=${url}`);
           }}
         >
           {description}

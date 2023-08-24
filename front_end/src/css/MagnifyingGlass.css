@@ -1,0 +1,27 @@
+.magnifying-glass-container {
+  display: flex;
+  flex-direction: row-reverse;
+  cursor: crosshair;
+  overflow: scroll;
+}
+
+.magnifying-glass {
+  width: 50vh;
+  height: 50vh;
+  border: 2px solid #333;
+  background-repeat: no-repeat;
+  background-size: 300% 300%;
+  pointer-events: none;
+  display: none;
+}
+
+.magnifying-glass.magnified {
+  display: block;
+}
+
+@media (max-width: 850px) {
+  .magnifying-glass,
+  .magnifying-glass.magnified {
+    display: none;
+  }
+}
