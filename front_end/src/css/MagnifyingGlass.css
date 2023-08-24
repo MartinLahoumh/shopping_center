@@ -1,0 +1,27 @@
+.magnifying-glass-container {
+  position: relative;
+  display: inline-block;
+  cursor: crosshair;
+}
+
+.original-image {
+  display: block;
+  max-width: 100%;
+}
+
+.magnifying-glass {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border: 2px solid #333;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-size: 200% 200%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  display: none;
+}
+
+.magnifying-glass.magnified {
+  display: block;
+}

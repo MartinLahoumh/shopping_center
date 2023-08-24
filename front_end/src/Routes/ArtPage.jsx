@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+
+import MagnifyingGlass from "../components/MagnifyingGlass";
 import QuantityButton from "../components/QuantityButton";
+
 import "../css/ArtPage.css";
 
 export default function ArtPage() {
@@ -39,6 +42,8 @@ export default function ArtPage() {
         <div className="art pop-out">
           <img src={info.imgURL} alt={info.description} />
         </div>
+
+        <MagnifyingGlass imageUrl={info.imgURL} />
 
         <div>
           <div className="descriptionOfArt">
