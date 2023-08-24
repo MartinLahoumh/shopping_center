@@ -18,7 +18,8 @@ function ArtForSale(){
                 </div>
 
                 <div className="descriptionOfArt">
-                    <h1>Art Title</h1>
+                    <h1>Michael Jackson</h1>
+                    <h3>Credit: Andy Warhol, 1984.</h3>
                     <p>
                         Description of the Art!
                     </p>
