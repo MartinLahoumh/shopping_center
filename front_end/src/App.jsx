@@ -17,14 +17,14 @@ function App() {
           <div className="sections">
             {/* place everything else in header into here */}
             <Link to="/SignIn">Sign In</Link>
-            <Link to="/test1">ArtPage</Link>
+            <Link to="/ArtPage">ArtPage</Link>
             <Link to="/test2">CheckOut</Link>
           </div>
         </header>
         <Routes>
           <Route exact path="/SignIn" element={<SignIn />}></Route>
           <Route path="/" element={<Home />}></Route>
-          <Route path="/test1" element={<ArtPage />}></Route>
+          <Route path="/ArtPage" element={<ArtPage />}></Route>
           <Route path="/test2" element={<CheckoutPage />}></Route>
           <Route path="*" element={<ErrorPage />}></Route>
         </Routes>
