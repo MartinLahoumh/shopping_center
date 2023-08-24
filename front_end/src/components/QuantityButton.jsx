@@ -1,8 +1,6 @@
-import { useState } from "react";
+import PropTypes from "prop-types";
 
-function QuantityButton() {
-  const [quantity, setQuantity] = useState(0);
-
+function QuantityButton({ quantity, setQuantity }) {
   const qtyIncrement = () => {
     setQuantity(prevQuantity => ++prevQuantity);
   };
@@ -27,5 +25,10 @@ function QuantityButton() {
     </>
   );
 }
+
+QuantityButton.propTypes = {
+  quantity: PropTypes.number.isRequired,
+  setQuantity: PropTypes.func.isRequired,
+};
 
 export default QuantityButton;

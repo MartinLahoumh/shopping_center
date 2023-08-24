@@ -5,10 +5,13 @@ import "../css/ArtPage.css";
 
 export default function ArtPage() {
   const [info, setInfo] = useState(0);
+  const [quantity, setQuantity] = useState(0);
   const navigate = useNavigate();
 
   const navigateToCheckout = () => {
-    // 👇️ navigate to /
+    if (quantity === 0) {
+      return;
+    }
     navigate("../test2");
     // TODO: before redirect set users cart with db
   };
@@ -45,7 +48,7 @@ export default function ArtPage() {
           </div>
           <div className="purchaseArt">
             <p>Quantity:</p>
-            <QuantityButton></QuantityButton>
+            <QuantityButton quantity={quantity} setQuantity={setQuantity} />
             <button className="artButton" onClick={navigateToCheckout}>
               Buy
             </button>
