@@ -11,12 +11,12 @@
 
 .magnifying-glass {
   position: absolute;
-  width: 200px;
-  height: 200px;
+  width: 30vh;
+  height: 30vh;
   border: 2px solid #333;
-  border-radius: 50%;
+  /* border-radius: 50%; */
   background-repeat: no-repeat;
-  background-size: 200% 200%;
+  background-size: 300% 300%;
   transform: translate(-50%, -50%);
   pointer-events: none;
   display: none;

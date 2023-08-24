@@ -2,7 +2,7 @@ import { useState } from "react";
 import PropTypes from "prop-types";
 import "../css/MagnifyingGlass.css";
 
-const MagnifyingGlass = ({ imageUrl }) => {
+function MagnifyingGlass({ imageUrl }) {
   const [magnified, setMagnified] = useState(false);
   const [position, setPosition] = useState({ x: 0, y: 0 });
 
@@ -44,7 +44,7 @@ const MagnifyingGlass = ({ imageUrl }) => {
       <img src={imageUrl} alt="Original" className="original-image" />
     </div>
   );
-};
+}
 
 export default MagnifyingGlass;
 
