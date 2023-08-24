@@ -1,22 +1,21 @@
+import { useParams } from "react-router";
+import Header from "../components/Header";
+import TrendingSlider from "../components/TrendingSlider";
+import DisplaySection from "../components/DisplaySection";
+
 function Home() {
-  return (
-    <>
-      <div>
-        <ul>
-          <li>A dummy list</li>
-          <li>b</li>
-          <li>c</li>
-          <li>d</li>
-          <li>e</li>
-          <li>f</li>
-          <li>g</li>
-          <li>h</li>
-          <li>i</li>
-          <li>j</li>
-        </ul>
-      </div>
-    </>
-  );
+  let {auth} = useParams();
+    return (
+      <>
+        <div>
+          <Header auth={auth}/>
+          {console.log("AUTH", auth)}
+          <TrendingSlider />
+          <DisplaySection sectionName="Test Section" />
+          <DisplaySection sectionName="Test Section 2" />
+        </div>
+      </>
+    );
 }
 
 export default Home;
