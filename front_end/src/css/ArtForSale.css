@@ -69,9 +69,8 @@ input.qtyminus {
   transform: scale(1.5, 1.5);
 }
 
-@media (max-width: 750px) {
+@media (max-width: 850px) {
   .artWrapper {
     flex-direction: column;
-    /* Additional CSS properties for .artWrapper when width < 750px */
   }
 }
