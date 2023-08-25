@@ -1,7 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import Header from "../components/Header";
 function SignUp() {
   const [authForm, setAuthForm] = useState({
     username: "",
@@ -31,7 +30,6 @@ function SignUp() {
   return (
     <>
       <div>
-        <Header auth={null} />
         <h1>Sign Up</h1>
         <form onSubmit={handleSubmit}>
           <label>Username</label>
