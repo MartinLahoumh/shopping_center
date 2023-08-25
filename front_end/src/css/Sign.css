@@ -1,0 +1,20 @@
+.sign-form-wrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sign-title{
+    color:black;
+    font-family: Ruwudu;
+    font-size: 50px;
+}
+
+.sign-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}

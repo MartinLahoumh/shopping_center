@@ -1,37 +1,43 @@
 .artWrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   /* weird scrolling when @ 100 */
   height: 90%;
-  padding-left: 5vw;
+  padding-left: 10vw;
   padding-right: 10vw;
 }
 
+.art-img{
+  border: 10px double black;
+  box-shadow: 5px 4px black;
+  background-color: #d4c8b8;;
+}
 .artButton {
   margin: 10px auto;
+  border: 10px double black;
+  border-radius: 3px;
+  background-color: #a28769;
+  box-shadow: 4px 5px black;
+  color: rgb(0, 0, 0);
+  font-size: larger;
+  cursor: pointer;
+  transition: background-color 0.5s;
+}
+
+.artButton:hover {
+  background-color: white;
+  transition: background-color 0.5s;
 }
 
 /*Art's Description*/
 .descriptionOfArt,
 .purchaseArt {
   text-align: center;
-}
-
-/*Quantity Button CSS*/
-.qty {
-  width: 40px;
-  height: 25px;
-  text-align: center;
-}
-
-input.qtyplus {
-  width: 25px;
-  height: 25px;
-}
-input.qtyminus {
-  width: 25px;
-  height: 25px;
+  padding: 0 2em;
+  font-size: large;
+  color: black;
+  font-family: Ruwudu;
 }
 
 @media (max-width: 850px) {

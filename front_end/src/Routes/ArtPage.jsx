@@ -36,8 +36,9 @@ export default function ArtPage() {
   return (
     <>
       <div className="artWrapper">
-        <MagnifyingGlass imageUrl={'http://localhost:5000'+postInfo.img} />
-
+        <div className="art-img">
+          <MagnifyingGlass imageUrl={'http://localhost:5000'+postInfo.img} />
+        </div>
         <div>
           <div className="descriptionOfArt">
             <h1>{postInfo.title}</h1>
@@ -45,10 +46,10 @@ export default function ArtPage() {
             <p>{postInfo.description}</p>
           </div>
           <div className="purchaseArt">
-            <p>Quantity:</p>
+            <p>Quantity: </p>
             <QuantityButton quantity={quantity} setQuantity={setQuantity} />
             <button className="artButton" onClick={navigateToCheckout}>
-              Buy
+              Add to Cart
             </button>
           </div>
         </div>

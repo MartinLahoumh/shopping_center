@@ -2,6 +2,27 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
-  background-color: red;
+  background-color: #c8bb96;
+  padding: 0 20px 0 20px;
+  height: 8vh;
+  border-bottom-style: solid;
+  border-bottom-color: black;
+  border-bottom-width: 5px;
+}
+
+.sections{
+  display: flex;
+  width: 30%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+header a {
+  color: black;
+  text-decoration: none;
+}
+
+header a:hover {
+  color: white;
 }

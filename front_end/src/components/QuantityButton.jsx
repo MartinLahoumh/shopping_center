@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import "../css/QuantityButton.css";
 
 function QuantityButton({ quantity, setQuantity }) {
   const qtyIncrement = () => {
@@ -14,6 +15,8 @@ function QuantityButton({ quantity, setQuantity }) {
   return (
     <>
       <div className="quantity">
+        <div></div>
+        <div></div>
         <button className="minus" onClick={qtyDecrement}>
           -
         </button>
@@ -21,6 +24,8 @@ function QuantityButton({ quantity, setQuantity }) {
         <button className="plus" onClick={qtyIncrement}>
           +
         </button>
+        <div></div>
+        <div></div>
       </div>
     </>
   );

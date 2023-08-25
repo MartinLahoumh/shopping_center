@@ -17,7 +17,7 @@ function DisplaySection(props) {
 
   return (
     <>
-      <p>{props.category}</p>
+      <p className="display-section-name">{props.category}</p>
       <div className="display-section-wrapper">
         <div className="art-container">
           {posts.map((post, index) => (

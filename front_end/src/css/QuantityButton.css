@@ -1,0 +1,33 @@
+/*Quantity Button CSS*/
+.qty {
+  width: 40px;
+  height: 25px;
+  text-align: center;
+}
+
+input .qtyplus {
+  width: 25px;
+  height: 25px;
+}
+input .qtyminus {
+  width: 25px;
+  height: 25px;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  /* width: 70%; */
+}
+
+.minus,
+.plus {
+  color: white;
+  font-size: large;
+  background-color: gray;
+  border: solid 1px #303027;
+  border-radius: 5px;
+  height: 30px;
+  width: 30px;
+}

@@ -12,6 +12,8 @@
   height: 400px;
   width: 100%;
   border: 1px solid #ccc;
+  border: 10px double black;
+  box-shadow: 7px 7px black;
 }
 
 .slide {

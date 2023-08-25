@@ -2,6 +2,7 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import {Link, useNavigate} from 'react-router-dom';
 import Header from '../components/Header';
+import '../css/Sign.css';
 function SignIn() {
     const [authForm, setAuthForm] = useState({
         username: "",
@@ -33,19 +34,20 @@ function SignIn() {
             console.log(error)
         }
     }
+    
   return (
     <>
-      <div>
-        <Header auth={null} />
-        <h1>Sign In</h1>
-        <form onSubmit={handleSubmit}>
-          <label>Username</label>
+      <div className='sign-form-wrap'>
+        <h1 className='sign-title'>Sign In</h1>
+        <hr />
+        <form className='sign-form' onSubmit={handleSubmit}>
+          <label className='sign-form-subtitle'>Username</label>
           <input type="text" name="username" id="username" onChange={handleChange}></input>
           <br />
-          <label>Password</label>
+          <label className='sign-form-subtitle'>Password</label>
           <input type="text" name="password" id="password" onChange={handleChange}></input>
           <br />
-          <button type="submit">Sign In</button>
+          <button className="artButton" type="submit">Sign In</button>
           <p>Dont have an account?</p><Link to="/SignUp">Sign Up!</Link>
         </form>
       </div>
