@@ -16,7 +16,7 @@ body {
   color: white;
 }
 
-form {
+.checkout-form {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -26,13 +26,13 @@ form {
   border-radius: 10px;
 }
 
-label,
-input,
-button {
+.checkout-label,
+.checkout-input,
+.checkout-button {
   margin: 5px 0;
 }
 
-button {
+.checkout-button {
   padding: 10px 20px;
   background-color: #007bff;
   color: white;
@@ -60,7 +60,7 @@ button {
   background-color: black;
 }
 
-button:hover {
+.checkout-button:hover {
   background-color: #0056b3;
 }
 .itemList h1 {
