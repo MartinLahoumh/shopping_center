@@ -1,6 +1,6 @@
 .artWrapper {
   display: flex;
-  justify-content: center;
+  justify-content: space-between; /* DO NOT CHANGE THIS LINE OR ZOOM FEATURE BREAKS */
   align-items: center;
   /* weird scrolling when @ 100 */
   height: 90%;
@@ -8,7 +8,7 @@
   padding-right: 10vw;
 }
 
-.artButton{
+.artButton {
   margin: 10px auto;
 }
 
