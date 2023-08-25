@@ -1,6 +1,6 @@
 .artWrapper {
   display: flex;
-  justify-content: space-between; /* DO NOT CHANGE THIS LINE OR ZOOM FEATURE BREAKS */
+  justify-content: center;
   align-items: center;
   /* weird scrolling when @ 100 */
   height: 90%;
