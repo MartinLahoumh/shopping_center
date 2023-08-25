@@ -7,7 +7,7 @@ import Post from "./Routes/Post";
 import Home from "./Routes/Home";
 import ErrorPage from "./Routes/ErrorPage";
 import ArtPage from "./Routes/ArtPage";
-import CheckoutPage from "./Routes/CheckOutPage";
+import CheckoutPage from "./Routes/CheckoutPage";
 
 import Header from "./components/Header";
 

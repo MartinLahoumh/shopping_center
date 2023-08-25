@@ -1,0 +1,81 @@
+body
+{
+    overflow:hidden;
+}
+.checkoutContainer
+{
+    overflow:hidden;
+    height: 100vh;
+}
+  
+.CreditCardContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    
+    color: white;
+   
+  
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+   
+  }
+  
+  label, input, button {
+    margin: 5px 0;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    align-items: center;
+    
+  }
+  .submit-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .submit-button:hover {
+    background-color: #0056b3;
+  }
+  .PopUpContainer
+  {
+    display:flex;
+    align-items: center;
+    background-color: black;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  .itemList h1
+  {
+   text-align: center;
+   height:4vh;
+
+  }
+  .filler
+  {
+    background-color: black;
+    height:50vh;
+  }
