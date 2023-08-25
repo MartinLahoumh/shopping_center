@@ -14,6 +14,7 @@ function App() {
       <Routes>
         <Route exact path="/SignIn" element={<SignIn />}></Route>
         <Route exact path="/SignUp" element={<SignUp />}></Route>
+        <Route exact path="/Post" element={<Post />}></Route>
         <Route path="/" element={<Home />}></Route>
         <Route path="/:auth" element={<Home />}></Route>
         <Route path="/ArtPage" element={<ArtPage />}></Route>

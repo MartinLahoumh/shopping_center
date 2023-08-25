@@ -11,8 +11,9 @@ function Home() {
           <Header auth={auth}/>
           {console.log("AUTH", auth)}
           <TrendingSlider />
-          <DisplaySection sectionName="Test Section" />
-          <DisplaySection sectionName="Test Section 2" />
+          <DisplaySection category="Classic" />
+          <DisplaySection category="Pop" />
+          <DisplaySection category="Music" />
         </div>
       </>
     );

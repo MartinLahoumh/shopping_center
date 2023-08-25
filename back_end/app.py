@@ -25,13 +25,28 @@ class Users(db.Model):
     
 class Post(db.Model):
     __tablename__ = 'post'
-    title = db.Column(db.String(200), primary_key=True)
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    title = db.Column(db.String(200), nullable=False)
     price = db.Column(db.Integer, nullable=False)
-    category = db.Column(db.String(200), nullable=False)
+    category = db.Column(db.String(200), nullable=True)
     description = db.Column(db.Text, nullable=False)
     img = db.Column(db.String, nullable=False)
     def __repr__(self):
-        return f"<Post(title={self.title})"
+        return f"<Post(title={self.title}, id={self.id})"
+
+class Posts(db.Model):
+    __tablename__ = 'posts'
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    title = db.Column(db.String(200), nullable=False)
+    price = db.Column(db.Integer, nullable=False)
+    category = db.Column(db.String(200), nullable=True)
+    description = db.Column(db.Text, nullable=False)
+    img = db.Column(db.String, nullable=False)
+    credit = db.Column(db.String, nullable=False)
+    def __repr__(self):
+        return f"<Post(title={self.title}, id={self.id}, category={self.category}, price={self.price}, description={self.description}, img={self.img}, credit={self.credit})"
+    
+    
 
 #init tables
 db.create_all()
@@ -74,7 +89,7 @@ def logout():
     unset_jwt_cookies(response)
     return response
     
-
+#Actual Post's
 @app.route('/Post', methods=['POST'])
 def post():
     #Image Handle
@@ -83,26 +98,41 @@ def post():
     img_name = secure_filename(uploaded_img.filename).lower()
     uploaded_img.save(os.path.join(upload_folder, img_name))
     Img = url_for('static', filename='img/'+img_name)
-    Title = request.json.get('title')
-    Price = request.json.get('price')
-    Category = request.json.get('cat')
-    Description = request.json.get('desc')
-    new_post = Post(
+    print("IMAGE NAME, ", Img)
+    Title = request.form.get('title')
+    Credit = request.form.get('credit')
+    Price = request.form.get('price')
+    Category = request.form.get('cat')
+    Description = request.form.get('desc')
+    new_post = Posts(
         title = Title,
         price = Price,
         category = Category,
         description = Description,
         img = Img,
+        credit = Credit,
     )
     db.session.add(new_post)
     db.session.commit()
     return jsonify({"msg":"Post Created"})
-    # if 'img' in request.files:
-    #     file = request.files['img']
-    #     filename = secure_filename(file.filename)
-    #     # Here you should save the file
-    #     # file.save(path_to_save_file)
-    #     return 'File uploaded successfully'
-    # return 'No file uploaded'
+
+#Get a post by category
+@app.route('/PostCat/<string:category>', methods=['GET'])
+def post_cat(category):
+    #Image Handle
+    posts = []
+    for post in Posts.query.all():
+        if post.category == category:
+            posts.append({"title": post.title, "price": post.price, "category": post.category, "description": post.description, "img": post.img, "credit": post.credit, "id":post.id})
+    return jsonify(posts)
+
+#Get a post by id
+@app.route('/PostId/<int:id>', methods=['GET'])
+def post_id(id):
+    #Image Handle
+    post = Posts.query.get(id)
+    postInfo = {"title": post.title, "price": post.price, "category": post.category, "description": post.description, "img": post.img, "credit": post.credit, "id":post.id}
+    return jsonify(postInfo)
+
 if __name__ == '__main__':
     app.run(debug=True)

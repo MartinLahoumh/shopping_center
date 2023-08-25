@@ -2,16 +2,16 @@ import PropTypes from "prop-types";
 import "../css/DisplayImage.css";
 import { useNavigate } from "react-router-dom";
 
-function DisplayImage({ imgURL, name, price, description, url }) {
+function DisplayImage({ imgURL, name, price, description, id }) {
   const navigate = useNavigate();
   return (
     <div className="display-image-wrapper">
       <div className="image-container">
-        <img src={imgURL} alt={name} />
+        <img src={'http://localhost:5000'+imgURL} alt={name} />
         <div
           className="description"
           onClick={() => {
-            navigate(`/ArtPage?id=${url}`);
+            navigate(`/ArtPage?id=${id}`);
           }}
         >
           {description}
@@ -29,7 +29,7 @@ DisplayImage.propTypes = {
   name: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
   description: PropTypes.string.isRequired,
-  url: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
 };
 
 export default DisplayImage;

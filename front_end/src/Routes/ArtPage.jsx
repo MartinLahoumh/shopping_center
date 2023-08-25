@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-
+import axios from "axios";
 import MagnifyingGlass from "../components/MagnifyingGlass";
 import QuantityButton from "../components/QuantityButton";
 
@@ -9,6 +9,14 @@ import "../css/ArtPage.css";
 export default function ArtPage() {
   const [info, setInfo] = useState(0);
   const [quantity, setQuantity] = useState(0);
+  const [postInfo, setPostInfo] = useState([]);
+
+  const fetchPost = async (id)=>{
+    const config = {headers:{'Content-Type': 'application/json'}};
+    const response = await axios.get(`http://localhost:5000/PostId/${id}`);
+    setPostInfo(response.data);
+  }
+
   const navigate = useNavigate();
 
   const navigateToCheckout = () => {
@@ -22,30 +30,19 @@ export default function ArtPage() {
   useEffect(() => {
     const searchParams = new URLSearchParams(window.location.search);
     const id = searchParams.get("id");
-
-    //at this point pull from the db and setInfo to json pulled from db using id
-    console.log(id);
-    setInfo({
-      name: "Michael Jackson",
-      credit: "Andy Warhol, 1984",
-      description: "Description of the Art!",
-      imgURL:
-        "https://ids.si.edu/ids/deliveryService?id=NPG-86T0028A_2&max=500",
-      price: 69,
-      url: "asdf", //a unique id
-    });
+    fetchPost(id);
   }, []);
 
   return (
     <>
       <div className="artWrapper">
-        <MagnifyingGlass imageUrl={info.imgURL} />
+        <MagnifyingGlass imageUrl={'http://localhost:5000'+postInfo.img} />
 
         <div>
           <div className="descriptionOfArt">
-            <h1>{info.name}</h1>
-            <h3>Credit: {info.credit}</h3>
-            <p>{info.description}</p>
+            <h1>{postInfo.title}</h1>
+            <h3>Credit: {postInfo.credit}</h3>
+            <p>{postInfo.description}</p>
           </div>
           <div className="purchaseArt">
             <p>Quantity:</p>

@@ -57,12 +57,15 @@ function Post() {
         <Header auth={null} />
         <h1>Post</h1>
         <iframe name="dummyframe" id="dummyframe" ></iframe>
-        <form action='http://localhost:5000/UploadImage' method='POST' enctype = "multipart/form-data" target="dummyframe">
+        <form action='http://localhost:5000/Post' method='POST' enctype = "multipart/form-data" target="dummyframe">
           <label>Image</label>
           <input type="file" name="img" id="img"></input>
           <br />
           <label>Title</label>
-          <input type="text" name="title" id="title" onChange={handleChange}></input>
+          <input type="text" name="title" id="title" value={postForm['title']}onChange={handleChange}></input>
+          <br />
+          <label>Credit</label>
+          <input type="text" name="credit" id="credit" onChange={handleChange}></input>
           <br />
           <label>Price</label>
           <input type="text" name="price" id="price" onChange={handleChange}></input>
