@@ -1,15 +1,15 @@
 /*Quantity Button CSS*/
 .qty {
-    width: 40px;
-    height: 25px;
-    text-align: center;
-  }
-  
-.plus {
-    width: 25px;
-    height: 25px;
-  }
-.minus {
-    width: 25px;
-    height: 25px;
-  }
+  width: 40px;
+  height: 25px;
+  text-align: center;
+}
+
+input .qtyplus {
+  width: 25px;
+  height: 25px;
+}
+input .qtyminus {
+  width: 25px;
+  height: 25px;
+}
