@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import "../css/QuantityButton.css";
 
 function QuantityButton({ quantity, setQuantity }) {
   const qtyIncrement = () => {
