@@ -23,7 +23,7 @@ const Popup = () => {
       {isPopupVisible && (
         <div className="popup">
           <div className="popup-content">
-            <h3>Submit Information</h3>
+            
             <div className="center-content">
               <div className="CreditCardContainer">
                 <p>Thank You for shopping with us!</p>
