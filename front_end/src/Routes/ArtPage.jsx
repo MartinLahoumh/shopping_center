@@ -28,7 +28,8 @@ export default function ArtPage() {
     setInfo({
       name: "Michael Jackson",
       credit: "Andy Warhol, 1984",
-      description: "Portrait of Jackson commissioned by Andy Warhal for the cover of Time Magazin's issue for March 1984.",
+      description:
+        "Portrait of Jackson commissioned by Andy Warhal for the cover of Time Magazin's issue for March 1984.",
       imgURL:
         "https://ids.si.edu/ids/deliveryService?id=NPG-86T0028A_2&max=500",
       price: 69,
@@ -51,7 +52,7 @@ export default function ArtPage() {
             <p>Quantity: </p>
             <QuantityButton quantity={quantity} setQuantity={setQuantity} />
             <button className="artButton" onClick={navigateToCheckout}>
-              Buy
+              Add to Cart
             </button>
           </div>
         </div>

@@ -32,7 +32,7 @@ function DisplaySection({ sectionName }) {
   ];
   return (
     <>
-      <p>{sectionName}</p>
+      <p className="display-section-name">{sectionName}</p>
       <div className="display-section-wrapper">
         <div className="art-container">
           {artInfoArray.map((artObject, index) => (

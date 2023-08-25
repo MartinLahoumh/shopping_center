@@ -10,6 +10,15 @@
 
 .artButton {
   margin: 10px auto;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  font-size: larger;
+}
+
+.artButton:hover {
+  background-color: #0056b3;
 }
 
 /*Art's Description*/
