@@ -2,16 +2,17 @@
 
 ### Description
 
-(TODO: Fill this out)
+The shopping center is a place where people can buy and sell art pieces to display in their home. If you have an art piece that you find doesnt quite fit your room any more, sell it online to find it a different owner!
+If you are looking for art pieces to decorate your space to scream who you are, find it at the marketplace. (NOTE: prices are not offical, they are all here for testing purposes to see how high or low they can get. So if you see an art piece for $10000000, please do not 
+associate it with the price in a real world application, sorry for the trouble)
 
 ### Technologies Used
 
-(TODO: Fill out backend tech)
 | Front End | Back End |
 | --------- | -------- |
-| React / Vite | |
-| JavaScript | |
-| CSS | |
+| React / Vite | | |Flask|
+| JavaScript | | |SQLAlchemy|
+| CSS | | |Python|
 
 ### Hosting locally
 
@@ -22,9 +23,21 @@ The only prerequisites to installation are having the following already installe
 2. [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) [Node Package Manager]
 
 As mentioned we need to first setup the backend of the project which is done as follows:
-(TODO: @Martin needs to update this with instructions on how to both install dependencies from the req.txt file and getting the server up and running)
 
-1.
+1. from the terminal enter the /back_end folder
+2. It is recommended that you create a virtual environment, so please do so and activate it before the next step.
+3. run the following command [Doing so installs all neccesary packages to run the back end server]
+```bash
+pip install -r requirements.txt
+```
+4. To check all packages installed, run
+```bash
+pip freeze
+```
+5. Finnally, to run the back end server, use the following command.
+```bash
+flask run
+```
 
 Now that you've finished setting up and got the backend running we can get the frontend up and running
 
