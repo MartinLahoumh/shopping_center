@@ -14,6 +14,9 @@ associate it with the price in a real world application, sorry for the trouble)
 | JavaScript | | |SQLAlchemy|
 | CSS | | |Python|
 
+Front End: React/Vite, JavaScript, CSS
+Back End: Flask, SQLAlchemy, Python
+
 ### Hosting locally
 
 The steps to setting up and seeing the Art Shopping Center in action involve setting up both front/end of the project [with the backend prior to the frontend so it can properly communicate with the webpage].
