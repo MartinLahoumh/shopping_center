@@ -54,20 +54,20 @@ function Post() {
   };
   return (
     <>
-      <div>
-        <h1>Post</h1>
+      <div className='sign-form-wrap'>
+        <h1 className='sign-title'>Post</h1>
         <iframe name="dummyframe" id="dummyframe" ></iframe>
-        <form action='http://localhost:5000/Post' method='POST' enctype = "multipart/form-data" target="dummyframe">
-          <label>Image</label>
+        <form className='sign-form' action='http://localhost:5000/Post' method='POST' enctype = "multipart/form-data" target="dummyframe">
+          <label className='sign-form-subtitle'>Image</label>
           <input type="file" name="img" id="img"></input>
           <br />
-          <label>Title</label>
+          <label className='sign-form-subtitle'>Title</label>
           <input type="text" name="title" id="title" value={postForm['title']}onChange={handleChange}></input>
           <br />
-          <label>Credit</label>
+          <label className='sign-form-subtitle'>Credit</label>
           <input type="text" name="credit" id="credit" onChange={handleChange}></input>
           <br />
-          <label>Price</label>
+          <label className='sign-form-subtitle'>Price</label>
           <input
             type="text"
             name="price"
@@ -75,7 +75,7 @@ function Post() {
             onChange={handleChange}
           ></input>
           <br />
-          <label>Description</label>
+          <label className='sign-form-subtitle'>Description</label>
           <input
             type="text"
             name="desc"
@@ -83,7 +83,7 @@ function Post() {
             onChange={handleChange}
           ></input>
           <br />
-          <label>Category</label>
+          <label className='sign-form-subtitle'>Category</label>
           <input
             type="text"
             name="cat"
@@ -91,7 +91,7 @@ function Post() {
             onChange={handleChange}
           ></input>
           <br />
-          <button type="submit"></button>
+          <button className='artButton' type="submit">Post</button>
           <br />
         </form>
       </div>

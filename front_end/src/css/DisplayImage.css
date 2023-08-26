@@ -18,12 +18,14 @@
   overflow: hidden; /* Ensure the image is contained within the max size */
   border: 3px solid #000000;
   box-shadow: 4px 5px black;
+  cursor: pointer;
 }
 
 .image-container img {
   max-width: 100%;
   height: auto;
   transition: filter 0.3s ease-in-out;
+  
 }
 
 .description {
