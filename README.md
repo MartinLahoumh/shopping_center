@@ -10,9 +10,9 @@ associate it with the price in a real world application, sorry for the trouble)
 
 | Front End | Back End |
 | --------- | -------- |
-| React / Vite | | |Flask|
-| JavaScript | | |SQLAlchemy|
-| CSS | | |Python|
+| React / Vite |Flask|
+| JavaScript |SQLAlchemy|
+| CSS |Python|
 
 Front End: React/Vite, JavaScript, CSS
 Back End: Flask, SQLAlchemy, Python
